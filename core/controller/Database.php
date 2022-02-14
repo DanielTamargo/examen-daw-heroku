@@ -1,15 +1,16 @@
 <?php
 class Database {
+	//mysql://ba2b2d8529b7c0:4a599f17@eu-cdbr-west-02.cleardb.net/heroku_d07ee3d0e5d89eb?reconnect=true
 	public static $db;
 	public static $con;
 	function Database(){
-		$this->user="b61c5915ab24eb";$this->pass="9cc656bd";$this->host="eu-cdbr-west-02.cleardb.net";$this->ddbb="heroku_a01bc4777651db0";
+		$this->user="ba2b2d8529b7c0";$this->pass="4a599f17";$this->host="eu-cdbr-west-02.cleardb.net";$this->ddbb="heroku_d07ee3d0e5d89eb";
 		//Copiar también la información de la conexión en la función de abajo connect()
 	}
 
 	function connect(){
 		//Copiar aquí también la info de la conexión
-		$this->user="b61c5915ab24eb";$this->pass="9cc656bd";$this->host="eu-cdbr-west-02.cleardb.net";$this->ddbb="heroku_a01bc4777651db0";
+		$this->user="ba2b2d8529b7c0";$this->pass="4a599f17";$this->host="eu-cdbr-west-02.cleardb.net";$this->ddbb="heroku_d07ee3d0e5d89eb";
 		$con = new mysqli($this->host,$this->user,$this->pass,$this->ddbb);
 		$con->query("set sql_mode=''");
 		return $con;
